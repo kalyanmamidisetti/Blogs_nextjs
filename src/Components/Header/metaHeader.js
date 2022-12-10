@@ -8,8 +8,7 @@ export default function MetaHeader(props) {
   return (
     <Head>
       <title>{ogInfo?.og_title} | Blog</title>
-
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <meta
         name="viewport"
         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"

@@ -1,13 +1,12 @@
-"use client";
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Grid from "@material-ui/core/Grid";
-import Divider from "@material-ui/core/Divider";
+import { makeStyles } from "@mui/styles";
+import AppBar from "@mui/material/AppBar";
+import Grid from "@mui/material/Grid";
+import Divider from "@mui/material/Divider";
 //LOCAL IMPORTS
-import HeaderLogo from "../../public/fav.png";
+import HeaderLogo from "./fav.png";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
@@ -17,8 +16,6 @@ const useStyles = makeStyles(() => ({
   },
   logoWrap: {
     textAlign: "center",
-  },
-  logo: {
     width: "3.5rem",
     height: "3.5rem",
   },
@@ -26,21 +23,22 @@ const useStyles = makeStyles(() => ({
 
 function BlogHeader(props) {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.headerApp}>
         <Grid container spacing={1}>
-          <Grid item xs={2} sm={2} md={2} lg={2} className={classes.logoWrap}>
+          <Grid item xs={2} sm={2} md={2} lg={2}>
             <a href="https://google.com/">
               <img
                 src={HeaderLogo}
                 alt="Header logo"
-                className={classes.logo}
+                className={classes.logoWrap}
               />
             </a>
           </Grid>
           <Grid item xs={10} sm={10} md={10} lg={10}>
-            <p style={{ color: "red" }}>Hello</p>
+            <p style={{ color: "blue" }}>Hello</p>
           </Grid>
         </Grid>
       </AppBar>
