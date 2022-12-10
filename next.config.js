@@ -18,4 +18,5 @@ module.exports = withImages({
 
     return config;
   },
+  reactStrictMode: false,
 });
